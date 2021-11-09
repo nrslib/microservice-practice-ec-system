@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: debug
+  jms:
+    servicebus:
+      connection-string: ${AZURE_SERVICEBUS_CONNECTION_STRING}
+      pricingTier: basic
+azure:
+  cosmos:
+    uri: ${AZURE_COSMOS_URI}
+    key: ${AZURE_COSMOS_KEY}
+    database: ${AZURE_COSMOS_DATABASE}
