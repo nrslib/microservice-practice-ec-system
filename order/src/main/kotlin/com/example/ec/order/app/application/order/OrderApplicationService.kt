@@ -44,7 +44,7 @@ class OrderApplicationService(
 
     fun rejectOrder(orderId: String) {
         val order = orderRepository.find(OrderId(orderId)) ?: throw NotFoundException("not found order(orderId:${orderId})")
-        order.approve()
+        order.reject()
         orderRepository.save(order)
     }
 

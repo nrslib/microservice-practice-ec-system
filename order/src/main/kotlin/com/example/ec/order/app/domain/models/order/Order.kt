@@ -1,9 +1,8 @@
 package com.example.ec.order.app.domain.models.order
 
-import com.example.ec.applicationsupportstack.domainsupport.aggregate.AggregateRoot
 import com.example.ec.order.api.OrderState
 
-class Order(val id: OrderId, val items: OrderItems, state: OrderState) : AggregateRoot<Order>() {
+class Order(val id: OrderId, val items: OrderItems, state: OrderState) {
     var state = state
         private set
 
